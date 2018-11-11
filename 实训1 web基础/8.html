@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       var myDate = new Date();
+       var mytime = myDate.toLocaleTimeString();
+       var hour = myDate.getHours();
+       if(hour>=6&&hour<=12) 
+       {
+           document.write("早上好");
+       } else if(hour>=12&&hour<=18){
+           document.write("下午好");
+       } else if(hour>=18&&hour<=24){
+           document.write("晚上好");
+       } else {
+           document.write("凌晨好");
+       }
+   </script> 
+</body>
+</html>

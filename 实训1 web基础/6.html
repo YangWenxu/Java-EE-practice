@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        function checklength(tempInput) {
+            if (tempInput.value.length < 6 || tempInput.value.length > 10)
+                alert("用户名长度应为6-10个字符")
+        }
+
+        function Check1() {
+            if (document.getElementById("input1").value == "") {
+                alert("密码不能空！")
+                return false;
+            }
+        }
+        function Check() {
+
+            if (document.getElementById("input1").value != document.getElementById("input2").value) {
+                alert("两次输入密码不一样！");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="#" method="post">
+		<p class="infoTitle">注册</p>
+		    <tr height="40px">
+
+                <td colspan="2">
+
+                    <font size="4"><b>用户注册&nbsp;</b></font>
+
+                </td>
+
+            </tr></br>
+
+            <tr>
+
+                <td><b>用户名</b></td>
+
+                <td><input type="text" name="user" onblur="checklength(this)" /></td>
+
+            </tr></br>
+
+            <tr>
+
+                <td><b>密码</b></td>
+
+                <td><input type="password" id="input1" onchange="Check1()"></td>
+
+            </tr>
+
+            <tr>
+
+                <td><b>确认密码</b></td>
+
+                <td><input type="password" id="input2" onchange="Check()"></td>
+
+            </tr></br>
+	    来自城市: <select>
+	        <option value="">北京</option>
+	        <option value="">上海</option>
+	        <option value="">杭州</option>
+	        <option value="">广州</option>
+	     </select> <br>
+	    性别:  <input type="radio">男
+              <input type="radio">女 <br>
+        爱好: <input type="checkbox">篮球
+             <input type="checkbox">乒乓球
+             <input type="checkbox">棒球<br>
+        <input type="submit" name="Submit1" value="注册" /></label>
+        <input type="submit" name="Submit2" value="重置" /></label>
+    </form>
+</body>
+</html>
